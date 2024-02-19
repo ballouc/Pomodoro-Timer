@@ -86,7 +86,7 @@ body {
 }
 
 .tasklist-container::-webkit-scrollbar{
-    width: 12px;
+    width: 3px;
 }
 
 .tasklist-container::-webkit-scrollbar-track{
