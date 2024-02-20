@@ -11,6 +11,8 @@ This timer uses the 'pomodoro' method in task timing, using 25-minute intervals 
 - Using a task prompt component instead of a prompt object
 - Task completion animation
 - Automatic pomodoro cycles
+- Timer in browser tab?
+- Change 'i' icon to pencil icon to indicate edit
 
 # Tech stack
 For this project I created a React application using Vite.js, a lightweight local development server. I opted out of initially using CSS libraries for this project.
@@ -24,3 +26,8 @@ I will be experimenting with React and CSS libraries moving forward, to increase
 
 # Additionally
 If you have any insights on how I can improve this project or my coding practices, please reach out to let me know! I appreciate being told when I am wrong as long as I'm also given direction to move forward. Thank you!
+
+# Known Issues - To Be Fixed
+- Addition of blank or 'null' tasks
+- Tasks with the same name are all affected when edited or removed from the list.
+
