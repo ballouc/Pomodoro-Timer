@@ -1,5 +1,5 @@
 import { FontAwesomeIcon }from '@fortawesome/react-fontawesome'
-import { faCheck, faInfo } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faPencil } from '@fortawesome/free-solid-svg-icons';
 
 interface Props{
     taskValue: string;
@@ -22,7 +22,7 @@ const Task: React.FC<Props> = ( {taskValue, taskKey, isComplete, isOpen, onOpenO
                 <div className="task" id={taskKey}>{taskValue}</div>
                 <button className="btn task-options-btn"
                 onClick={() => onOpenOptions()}>
-                    <FontAwesomeIcon icon={faInfo} />
+                    <FontAwesomeIcon icon={faPencil} />
                 </button>
             </div>
         </>

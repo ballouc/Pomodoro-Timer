@@ -48,19 +48,21 @@ const TaskList = () => {
   }
 
   const handleDeleteTask = (taskKeyToDelete: string) => {
-    let newTasks = tasks.filter(task => task.taskKey !== taskKeyToDelete);
+    let newTasks = tasks.filter(task => {task.taskKey !== taskKeyToDelete});
     setTasks(newTasks);
   }
 
   // Function to handle when a task's value changes via options menu.
   const handleSaveOptions = (newTaskValue: string) => {
-    const updatedTasks = tasks.map(task => {
-      if (task.taskKey === currentTask.taskKey) {
-        return { ...task, taskValue: newTaskValue, taskKey: getTaskKey(newTaskValue), isOpen: false };
-      }
-      return task;
-    });
-    setTasks(updatedTasks);
+    if(newTaskValue.trim()){
+      const updatedTasks = tasks.map(task => {
+        if (task.taskKey === currentTask.taskKey) {
+          return { ...task, taskValue: newTaskValue, taskKey: getTaskKey(newTaskValue), isOpen: false };
+        }
+        return task;
+      });
+      setTasks(updatedTasks);
+    }
     setOptionsOpen(false);
   }
 

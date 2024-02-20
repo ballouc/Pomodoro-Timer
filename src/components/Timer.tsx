@@ -24,6 +24,7 @@ function Timer() {
     }
 
     const setTimerInterval = (chosenInterval: number) => {
+        setIsRunning(false)
         setCurrentInterval(chosenInterval)
         setTime(new Date(chosenInterval))
     }
